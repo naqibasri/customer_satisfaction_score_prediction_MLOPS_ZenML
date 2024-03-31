@@ -12,7 +12,7 @@ class IngestData:
         return pd.read_csv(self.data_path)
     
 @step
-def ingest_data(data_path:str) -> pd.DataFrame:
+def ingest_df(data_path:str) -> pd.DataFrame:
     try:
         data_ingester = IngestData(data_path)
         df = data_ingester.get_data()
